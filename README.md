@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Resil 💖</title>
 
-<!-- Cute Google Font -->
+<!-- Cute Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
@@ -62,18 +62,13 @@
         position: absolute;
     }
 
-    iframe {
-        margin-top: 20px;
-        border-radius: 12px;
-    }
-
-    /* Heart animation */
+    /* Floating hearts */
     .heart {
         position: absolute;
         bottom: -20px;
         font-size: 20px;
         animation: floatUp 6s linear infinite;
-        opacity: 0.7;
+        opacity: 0.8;
     }
 
     @keyframes floatUp {
@@ -93,30 +88,18 @@
 
 <div class="container">
     <h1>💌 Hi Resil 💌</h1>
-    <p>There’s a song that reminds me of you…</p>
-    <p>And every time I hear it, I think of us.</p>
+    <p>Every little thing reminds me of you.</p>
+    <p>So I just want to ask you one simple question…</p>
 
     <h2>Will you be my Valentine? 💖</h2>
 
     <button class="yes" onclick="yesClicked()">Yes 💕</button>
     <button class="no" id="noBtn">No 😢</button>
-
-    <!-- Spotify Embed -->
-    <iframe
-        src="https://open.spotify.com/embed/track/4IYfN5KZgqYb5wXcMznQhc"
-        width="300"
-        height="80"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-    </iframe>
 </div>
 
 <script>
     // Runaway NO button
     const noBtn = document.getElementById("noBtn");
-
-    noBtn.addEventListener("mouseover", moveButton);
-    noBtn.addEventListener("touchstart", moveButton);
 
     function moveButton() {
         const x = Math.random() * (window.innerWidth - 100);
@@ -125,7 +108,10 @@
         noBtn.style.top = y + "px";
     }
 
-    // Yes button
+    noBtn.addEventListener("mouseover", moveButton);
+    noBtn.addEventListener("touchstart", moveButton);
+
+    // YES button action
     function yesClicked() {
         document.body.innerHTML = `
             <div style="text-align:center; color:white;">
@@ -137,7 +123,7 @@
         `;
     }
 
-    // Floating hearts
+    // Floating hearts generator
     setInterval(() => {
         const heart = document.createElement("div");
         heart.className = "heart";
@@ -149,7 +135,7 @@
         setTimeout(() => {
             heart.remove();
         }, 7000);
-    }, 300);
+    }, 350);
 </script>
 
 </body>
