@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Resil 💖</title>
 
-<!-- Cute Google Fonts -->
+<!-- Cute Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
@@ -62,7 +62,7 @@
         position: absolute;
     }
 
-    /* Floating hearts */
+    /* Floating hearts animation */
     .heart {
         position: absolute;
         bottom: -20px;
@@ -88,8 +88,8 @@
 
 <div class="container">
     <h1>💌 Hi Resil 💌</h1>
-    <p>Every little thing reminds me of you.</p>
-    <p>So I just want to ask you one simple question…</p>
+    <p>I’ve been wanting to ask you something special.</p>
+    <p>So here it is…</p>
 
     <h2>Will you be my Valentine? 💖</h2>
 
@@ -116,14 +116,14 @@
         document.body.innerHTML = `
             <div style="text-align:center; color:white;">
                 <h1 style="font-family:'Pacifico', cursive;">🥰 YAY RESIL 🥰</h1>
-                <p>You just made my heart so happy 💖</p>
+                <p>You just made me really happy 💖</p>
                 <p>Happy Valentine’s Day 🌹</p>
-                <p>— from someone who loves you</p>
+                <p>— from someone who cares about you</p>
             </div>
         `;
     }
 
-    // Floating hearts generator
+    // Floating hearts
     setInterval(() => {
         const heart = document.createElement("div");
         heart.className = "heart";
